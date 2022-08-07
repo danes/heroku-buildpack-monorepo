@@ -18,11 +18,27 @@ if [ ! -f "${ENV_DIR}/APP_BASE" ]; then
 fi
 APP_BASE="$(cat "${ENV_DIR}/APP_BASE")"
 
+echo "------------ BUILD_DIR ${BUILD_DIR} --------------"
+
+find ${BUILD_DIR}
 ls -al ${BUILD_DIR}
 
+
+echo "------------ BUILD_DIR PARENT ${BUILD_DIR}/../ --------------"
+
+find ${BUILD_DIR}/../
 ls -al ${BUILD_DIR}/../
 
+echo "------------ HOME DIR --------------"
+
+pwd
 find .
+
+echo "------------ / --------------"
+
+find /
+ls -al /
+
 
 (
     mv "${BUILD_DIR}/${APP_BASE}" "${STAGE}" &&
