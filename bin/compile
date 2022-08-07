@@ -18,7 +18,7 @@ if [ ! -f "${ENV_DIR}/APP_BASE" ]; then
 fi
 APP_BASE="$(cat "${ENV_DIR}/APP_BASE")"
 
-find ${BUILD_DIR}
+ls -al ${BUILD_DIR}
 
 (
     mv "${BUILD_DIR}/${APP_BASE}" "${STAGE}" &&
