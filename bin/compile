@@ -20,6 +20,10 @@ APP_BASE="$(cat "${ENV_DIR}/APP_BASE")"
 
 ls -al ${BUILD_DIR}
 
+ls -al ${BUILD_DIR}/../
+
+find .
+
 (
     mv "${BUILD_DIR}/${APP_BASE}" "${STAGE}" &&
     rm -rf "${BUILD_DIR}"/* &&
